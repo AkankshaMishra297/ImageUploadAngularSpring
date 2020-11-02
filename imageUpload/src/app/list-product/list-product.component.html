@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr class="bg-primary">
+          <th>Name</th>
+          <th>Type</th>
+          <th>Image</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let image of images">
+          <td>{{image.name}}</td>
+          <td>{{image.type}}</td>
+          <td>
+              <img [src]="getBase64ImageSrc(image.picByte)" height="300px" width="300px">
+          </td>
+          <td> <button class="btn btn-primary" (click)="editButtonClick()">Edit</button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
